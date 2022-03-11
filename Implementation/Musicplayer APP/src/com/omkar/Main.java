@@ -5,11 +5,25 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Scanner;
+import java.time.LocalDate;
 
 class Main {
 	private static ArrayList<Album> albums = new ArrayList<>();
 	
 	public static void main(String[] args) {
+        LocalDate ld = java.time.LocalDate.now();
+		
+		System.out.println("Today: "+ld);
+		System.out.println("This is an Music Player APP");
+		System.out.println("Enter your birth date (yyyy-mm-dd)");
+		
+		Scanner s1=new Scanner(System.in);
+		
+		String s=s1.next();
+		
+		LocalDate ld1= LocalDate.parse(s);
+		System.out.println("Date Of Birth: "+ld1);
+		
 		Album album = new Album("Album1", "Hindi");
 		
 		album.addSong("Aao Naa", 4.5);
